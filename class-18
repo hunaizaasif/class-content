@@ -60,4 +60,19 @@ Today's session covered automated testing with pytest, rate limiting APIs, and d
 
 **Workflow:**
 - Push code → GitHub runs tests → If pass → Auto-deploy
+
+## 🌐 **Deployment to Hugging Face**
+
+**Setup steps:**
+- Create Hugging Face account
+- Create Space with Docker SDK
+- Get Access Token (write permission)
+- Add secrets to GitHub (token, username, space name)
+- Create Github Action
+
+**Cold start:**
+- Similar as deployed streamlit apps, may take 30-60 seconds on first request
 ~~------------------------------~~
+## 📚 **Resources:**
+- [Fast API: Rate Limiting and Pytest](https://github.com/raofahadkhan/fastapi-rate-limiting-and-pytest)
+- [CI/CD Pipeline: Hugging Face Deployment Guide](https://spiffy-palladium-3c4.notion.site/Deployment-2ffda4c66411802d9548c398a1fa133e?pvs=74)
