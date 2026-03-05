@@ -1,0 +1,63 @@
+# 🎓 Class 18 — Testing APIs with Pytest & CI/CD Deployment (6 Feb 2026)
+
+Today's session covered automated testing with pytest, rate limiting APIs, and deploying with CI/CD pipelines using GitHub Actions.
+
+~~------------------------------~~
+## 🧪 **Why Automated Testing?**
+
+**Manual testing problems:**
+- Testing APIs one by one with curl/Postman is time-consuming
+- Error-prone and needs repeating after every change
+
+**Automated testing solution:**
+- Write tests once, run anytime
+- Pytest for backend APIs
+- Jest/Playwright/Cypress for frontend
+
+**Assert keyword:**
+- Checks if something is True
+- If True → Test passes ✅
+- If False → Test fails ❌
+
+**Key concepts:**
+- Tests should be independent (no shared state)
+- Test both success and failure cases
+- Clear naming: `test_<what>_<condition>`
+~~------------------------------~~
+## 🔧 **Fixtures for Test Isolation**
+
+**What are fixtures?**
+- Setup code that runs before each test
+- Cleanup code that runs after tests
+- Ensures tests don't affect each other
+
+**autouse=True:**
+- Fixture runs automatically for every test
+- No need to pass as parameter
+~~------------------------------~~
+## 🚦 **Rate Limiting with SlowAPI**
+
+**Why rate limiting?**
+- Prevents API abuse and spam
+- Protects server from overload
+- Ensures fair usage for all users
+
+**How it works:**
+- Limit requests per time period (e.g., 5 per minute)
+- Returns 429 error when limit exceeded
+- Different endpoints can have different limits
+~~------------------------------~~
+## 🚀 **CI/CD with GitHub Actions**
+
+**What is CI/CD?**
+- **Continuous Integration:** Run tests automatically on push
+- **Continuous Deployment:** Deploy automatically after tests pass
+
+**When to run tests?**
+- On every git push
+- Before deployment
+- On pull requests
+
+**Workflow:**
+- Push code → GitHub runs tests → If pass → Auto-deploy
+~~------------------------------~~
